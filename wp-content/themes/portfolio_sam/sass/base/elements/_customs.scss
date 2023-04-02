@@ -1,0 +1,455 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $color__sb-primary; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #dc2743; 
+    border-radius: 3rem;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $color__sb-fourth; 
+  }
+
+
+
+ 
+
+  h2 {
+    padding: 2rem 0;
+  }
+
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+}
+.revealFromLeft {
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+}
+.revealFromLeft.active {
+    position: relative;
+    transform: translateX(0px);
+    opacity: 1;
+    transition: all 2s ease;
+}
+.revealFromRight {
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+}
+.revealFromRight.active {
+    position: relative;
+    transform: translateX(0px);
+    opacity: 1;
+    transition: all 2s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 2s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/food.svg');
+    height: 70vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    h1 {
+        text-align: center;
+        font-size: 7rem;
+        font-family: 'Shadows Into Light', cursive;
+        a {
+            text-decoration: none;
+            color: $color__sb-fourth;
+            color: white;
+        }
+    }
+    
+  
+
+    
+}
+footer#footer {
+    // background-color: $color__sb-primary;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/food.svg');
+    height: 70vh;
+    padding: 3rem 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    h2 {
+        text-align: center;
+        font-size: 7rem;
+        font-family: 'Shadows Into Light', cursive;
+        color: #fff;
+    }
+    
+  
+
+    
+}
+
+.nav {
+    padding: 2rem 0;
+    #primary-menu {
+        display: flex;
+        justify-content: center;
+        align-items: last baseline;
+        padding: 1rem;        
+
+        li {
+            padding: 1rem;
+            border-bottom: 3px solid transparent;
+
+            a {
+                font-size: 24px;
+                font-family: 'Phudu', cursive;
+                color: #fff;
+                
+            }
+
+        }
+        li:hover{
+            border-bottom: 3px solid $color__sb-fourth;
+            
+            a{
+                color: $color__sb-fourth;
+            }
+        }
+    }
+}
+
+#about {
+
+    background-color: $color__sb-second;
+
+}
+
+
+
+.container-about {
+    
+    .home-about-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+        h2{
+            font-size: 4rem;
+            color: #fff;
+            font-family: 'Shadows Into Light', cursive;
+        }
+
+        .about-txt {
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-start;
+            justify-content: center;
+            max-width: 35vw;
+        }
+    }
+
+    .home-about-img {
+        // height: 500px;
+        height: 80vh;
+        background-image: url('img/portfolio_SB_face.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: inherit;
+        transition: all ease-in-out .4s;
+    }
+    .home-about-img:hover {
+       transform: scale(.80) rotate(2deg);
+    }
+
+
+    p{
+        color: #fff;
+        font-family: 'Oswald', sans-serif;
+    }
+    }
+
+ 
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color__sb-second;
+    min-height: 712px;
+
+    ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            position: relative;
+            list-style: none;
+            margin: 0 28px;
+            cursor: pointer;
+
+            a {
+
+                text-decoration: none;
+
+                .fa-brands,.fa-envelope {
+                    font-size: 6em;
+                    color: #222;
+                }
+            }
+        }
+    }
+    // .socials {
+
+        
+    // }
+    ul li a::before {
+        font-family: 'FontAwesome';
+        position: absolute;
+        top: -25px;
+        left: 0;
+        font-size: 6em;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+    }
+
+    ul li:nth-child(1) a::before {
+        content: "\f003";
+        background-image: linear-gradient(
+            45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-bottom: 4px solid #dc2743;
+    }
+    ul li:nth-child(2) a::before {
+        content: "\f08c";
+        color: #25d366;
+        border-bottom: 4px solid #25d366;
+    }
+    ul li:nth-child(3) a::before {
+        content: "\f092";
+        color: #1da1f2;
+        border-bottom: 4px solid #1da1f2;
+    }
+
+    ul li:hover a::before {
+        height: 150%;
+    }
+}
+
+.btn-scroll {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    max-width: 60px;
+    border-radius: 3rem;
+    margin: 2rem;
+    background-color: #222;
+    border: none;
+    color: white;
+    z-index: 9999;
+  
+    i {
+      font-size: 2rem;
+    }
+  }
+
+  
+  
+
+
+
+.container-contact {
+    
+    .home-contact-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // flex-direction: column;
+        h2{
+            font-size: 5rem;
+            color: #fff;
+            font-family: 'Shadows Into Light', cursive;
+        }
+
+
+        .contact-txt {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+            max-width: 35vw;
+
+            span a {
+                font-size: 2rem;
+                padding-right:1rem;
+            }
+        }
+
+    }
+
+    .home-contact-img {
+        // height: 500px;
+        height: 80vh;
+        background-image: url('img/electric-guit-1920x1080.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: inherit;
+        transition: all ease-in-out .4s;
+    }
+    .home-contact-img:hover {
+       transform: scale(.80) rotate(2deg);
+    }
+
+    p{
+        color: #fff;
+        font-family: 'Oswald', sans-serif;
+    }
+    }
+#projet {
+    background-color: #e6683c;
+}
+
+
+
+.container-projet {
+ 
+    .home-projet-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h2{
+            font-size: 4rem;
+            color: #fff;
+            font-family: 'Shadows Into Light', cursive;
+        }
+
+
+
+        a {
+            color: white;
+        }
+
+        .home-projet-content {
+            max-width: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+    }
+
+    .home-projet-img {
+        // height: 500px;
+        height: 80vh;
+        background-image: url('img/programming.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: inherit;
+        transition: all ease-in-out .4s;
+    }
+    .home-projet-img:hover {
+       transform: scale(.80) rotate(-2deg);
+    }
+
+
+    p{
+        color: #fff;
+        font-family: 'Oswald', sans-serif;
+    }
+    }
+
+
+    .archive-project{
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+
+        .project {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+
+            h3 {
+                font-size: 3rem;
+                color: #fff;
+                font-family: 'Shadows Into Light', cursive;
+            }
+            p {
+                color: #fff;
+                font-family: 'Oswald', sans-serif;
+            }
+
+            .image {
+                border-radius: inherit;
+                transition: all ease-in-out .4s;
+            }
+            .image:hover {
+               transform: scale(.80) rotate(-2deg);
+            }
+        }
+    }
+
